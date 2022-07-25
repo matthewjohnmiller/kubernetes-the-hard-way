@@ -8,6 +8,21 @@ This tutorial leverages the [Google Cloud Platform](https://cloud.google.com/) t
 
 > The compute resources required for this tutorial exceed the Google Cloud Platform free tier.
 
+***
+
+**MJM:**  
+
+GCP's $300 in free credits falls under its broader [Google Cloud Free Program](https://cloud.google.com/free/docs/gcp-free-tier), which consists of three parts:
+- A **90-day, $300 Free Trial**, which is what Hightower references
+- The **Free Tier**, which is the limits under which GCP products are available for free for all customers (new and existing, before and after the 90-day threshold)
+- The **Google Maps Platform Monthly Credit**, which is a recurring $200 monthly credit specifically toward Google Maps Platform products  
+
+Be aware of the 90-day limit on the $300 free credits - if you don't already have a GCP account, and you don't intend to work through KTHW in the near term, it might make sense to wait to sign up until you can devote the time to it.
+
+**/MJM**
+
+***
+
 ## Google Cloud Platform SDK
 
 ### Install the Google Cloud SDK
