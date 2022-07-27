@@ -32,6 +32,17 @@ gcloud compute networks subnets create kubernetes \
 
 > The `10.240.0.0/24` IP address range can host up to 254 compute instances.
 
+***
+
+**MJM:**  
+
+Topics to build out:
+- Explain why that IP address range encompasses 254 compute instances
+
+**/MJM**
+
+***
+
 ### Firewall Rules
 
 Create a firewall rule that allows internal communication across all protocols:
@@ -67,6 +78,17 @@ NAME                                    NETWORK                  DIRECTION  PRIO
 kubernetes-the-hard-way-allow-external  kubernetes-the-hard-way  INGRESS    1000      tcp:22,tcp:6443,icmp        False
 kubernetes-the-hard-way-allow-internal  kubernetes-the-hard-way  INGRESS    1000      tcp,udp,icmp                Fals
 ```
+
+***
+
+**MJM:**  
+
+Topics to build out:
+- What's going on with the "allow" section for the external traffic firewall rule? does "tcp:22" represent HTTPS? SSH?
+
+**/MJM**
+
+***
 
 ### Kubernetes Public IP Address
 
@@ -114,6 +136,18 @@ for i in 0 1 2; do
 done
 ```
 
+***
+
+**MJM:**  
+
+Topics to build out:
+- High availability (why we need three nodes for the control plane)
+- Loops in bash
+
+**/MJM**
+
+***
+
 ### Kubernetes Workers
 
 Each worker instance requires a pod subnet allocation from the Kubernetes cluster CIDR range. The pod subnet allocation will be used to configure container networking in a later exercise. The `pod-cidr` instance metadata will be used to expose pod subnet allocations to compute instances at runtime.
@@ -138,6 +172,9 @@ for i in 0 1 2; do
     --tags kubernetes-the-hard-way,worker
 done
 ```
+
+
+
 
 ### Verification
 
